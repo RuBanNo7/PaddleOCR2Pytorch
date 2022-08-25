@@ -1,8 +1,8 @@
-##识别(先切割好文字小图)
+## 识别(先切割好文字小图)
 python tools/infer/predict_rec.py --rec_model_path weights/ch_ptocr_v3_rec_infer.pth --rec_image_shape 3,48,320 --rec_yaml_path configs/rec/PP-OCRv3/multi_language/chinese_cht_PP-OCRv3_rec.yml --rec_char_dict_path pytorchocr/utils/ppocr_keys_v1.txt  --image_dir doc/imgs_words/ch/word_4.jpg
-##检测
+## 检测
 python tools/infer/predict_det.py --det_model_path weights/ch_ptocr_v3_det_infer.pth --image_dir doc/imgs/example.jpg
-##检测并识别
+## 检测并识别
 python tools/infer/predict_system.py --image_dir doc/imgs/example.jpg --det_model_path weights/ch_ptocr_v3_det_infer.pth --rec_image_shape 3,48,320 --rec_model_path weights/ch_ptocr_v3_rec_infer.pth
 
 
